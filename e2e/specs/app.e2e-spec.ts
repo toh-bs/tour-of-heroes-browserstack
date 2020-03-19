@@ -1,14 +1,14 @@
-import { BlankPage } from './app.po';
+import { BlankPage } from '../page-objects/app.po';
 
 describe('blank App', () => {
   let page: BlankPage;
 
-  beforeEach(() => {
+  beforeEach(async () => {
     page = new BlankPage();
   });
 
-  it('should display message saying app works', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Tour of Heroes');
+  it('should display message saying app works', async () => {
+    await page.navigateTo();
+    expect(await page.getParagraphText()).toEqual('Tour of Heroes');
   });
 });
