@@ -18,7 +18,7 @@ const commonPropertiesForCapabilities = {
 exports.config = {
   allScriptsTimeout: 300000,
   getPageTimeout: 30000,
-  specs: ['./e2e/*.e2e-spec.ts'],
+  specs: ['./e2e/specs/*.e2e-spec.ts'],
 
   // bs-local.com is a browserstack alias that redirects to the locally hosted instance
   baseUrl: 'http://bs-local.com:4000/',
