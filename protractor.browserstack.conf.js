@@ -21,12 +21,36 @@ exports.config = {
 
   multiCapabilities: [
     {
-      logName: 'Windows 10 Chrome',
+      logName: 'Windows 10 Firefox',
       os: 'Windows',
       os_version: '10',
+      browserName: 'Firefox',
+      browser_version: '74.0',
+      'browserstack.selenium_version': '3.10.0',
+      ...browserstackCapabilities
+    },
+    {
+      logName: 'OSX Safari',
+      os: 'OS X',
+      os_version: 'High Sierra',
+      browserName: 'Safari',
+      browser_version: '11.0',
+      ...browserstackCapabilities
+    },
+    {
+      logName: 'Galaxy Note 10 Chrome',
+      os_version: '9.0',
+      device: 'Samsung Galaxy Note 10',
       browserName: 'Chrome',
-      browser_version: '76.0',
-      resolution: '1920x1080',
+      real_mobile: 'true',
+      ...browserstackCapabilities
+    },
+    {
+      logName: 'iPhone X Safari',
+      device: 'iPhone X',
+      os_version: '11',
+      browserName: 'Safari',
+      real_mobile: 'true',
       ...browserstackCapabilities
     }
   ],
