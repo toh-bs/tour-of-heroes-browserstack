@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "e2e-bs": "ng e2e --protractorConfig=./protractor.browserstack.conf"
+    "e2e-bs": "ng e2e --configuration=browserstack --protractorConfig=./protractor.browserstack.conf"
   },
   "private": true,
   "dependencies": {
