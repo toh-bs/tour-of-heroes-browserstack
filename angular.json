@@ -53,6 +53,9 @@
           "configurations": {
             "production": {
               "browserTarget": "tour-of-heroes:build:production"
+            },
+            "browserstack": {
+              "publicHost": "bs-local.com:4200"
             }
           }
         },
@@ -101,6 +104,11 @@
           "options": {
             "protractorConfig": "./protractor.conf.js",
             "devServerTarget": "tour-of-heroes:serve"
+          },
+          "configurations": {
+            "browserstack": {
+              "devServerTarget": "tour-of-heroes:serve:browserstack"
+            }
           }
         },
         "lint": {
