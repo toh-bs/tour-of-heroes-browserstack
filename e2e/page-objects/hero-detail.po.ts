@@ -25,8 +25,15 @@ export class HeroDetail {
     return this.getHeroNameInput().getAttribute('value');
   }
 
+  clearHeroName() {
+    return this.getHeroNameInput().clear();
+  }
   enterHeroName(heroName) {
     return this.getHeroNameInput().sendKeys(heroName);
+  }
+
+  save() {
+    return this.getSaveButton().click();
   }
 
   private getHeroNameInput() {
@@ -35,5 +42,9 @@ export class HeroDetail {
 
   private getIdLabel() {
     return this.el.element(by.cssContainingText('div div label', 'id:'));
+  }
+
+  private getSaveButton() {
+    return this.el.element(by.buttonText('Save'));
   }
 }
