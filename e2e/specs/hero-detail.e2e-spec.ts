@@ -1,6 +1,7 @@
 import { BlankPage } from '../page-objects/app.po';
 import { HeroDetail } from '../page-objects/hero-detail.po';
 import { Dashboard } from '../page-objects/dashboard.po';
+import { takeScreenshot } from '../helpers/screenshot';
 
 describe('hero detail', () => {
   const app = new BlankPage();
@@ -29,5 +30,7 @@ describe('hero detail', () => {
 
     expect(await dashboard.isDisplayed()).toBe(true);
     expect(await dashboard.getHeroName(1)).toBe('Spiderman');
+
+    await takeScreenshot('dashboard_after_edit');
   });
 });

@@ -1,5 +1,6 @@
 import { Dashboard } from '../page-objects/dashboard.po';
 import { BlankPage } from '../page-objects/app.po';
+import { takeScreenshot } from '../helpers/screenshot';
 
 describe('dashboard', () => {
   let page: BlankPage;
@@ -16,5 +17,7 @@ describe('dashboard', () => {
     expect(await dashboard.getHeroName(2)).toEqual('Bombasto');
     expect(await dashboard.getHeroName(3)).toEqual('Celeritas');
     expect(await dashboard.getHeroName(4)).toEqual('Magneta');
+
+    await takeScreenshot('hero_names');
   });
 });
